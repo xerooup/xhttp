@@ -15,7 +15,6 @@ you don't need documentation or long guides.<br>
 just look at the example below - everything is straightforward:
 ```kt
 import org.xeroup.xhttp.XHttp
-import org.xeroup.xhttp.ContentType
 
 val response = XHttp
     .post("URL") // the link to which the web request will be sent
@@ -27,8 +26,8 @@ val response = XHttp
         "name" to "value"
     )) // add headers using a map
     
-    .body("JSON", ContentType.JSON) // request body 
-    // or: .body("TEXT", ContentType.TEXT)
+    .body("JSON", "application/json") // request body 
+    // or: .body("TEXT", "text/plain")
     
     .timeout(2000) // how many milliseconds are given for response
     .send() // sending our request
