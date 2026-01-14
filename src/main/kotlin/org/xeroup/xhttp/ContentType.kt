@@ -1,4 +1,4 @@
-package org.xeroup.xhttp.utils
+package org.xeroup.xhttp
 
 // content types
 object ContentType {
