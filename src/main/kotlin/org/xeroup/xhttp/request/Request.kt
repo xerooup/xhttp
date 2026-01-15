@@ -31,6 +31,10 @@ class Request internal constructor(
         timeoutMs = ms
     }
 
+    fun timeout(duration: kotlin.time.Duration): Request = apply {
+        timeoutMs = duration.inWholeMilliseconds.toLong()
+    }
+
     fun body(text: String, contentType: String): Request = apply {
         this.bodyBytes = text.toByteArray(Charsets.UTF_8)
         this.contentType = contentType
