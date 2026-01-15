@@ -17,24 +17,34 @@ just look at the example below - everything is straightforward:
 import org.xeroup.xhttp.XHttp
 
 val response = XHttp
-    .post("URL") // the link to which the web request will be sent
-    // or: .get(), put(), delete()
-    
-    .header("name", "value") // add header
-    // or:
-    .headers(mapOf(
-        "name" to "value"
-    )) // add headers using a map
-    
-    .body("JSON", "application/json") // request body 
-    // or: .body("TEXT", "text/plain")
-    
-    .timeout(2000) // how many milliseconds are given for response
-    .send() // sending our request
+    .post("URL")
+    // HTTP method and target URL
+    // available methods: get(), post(), put(), delete()
 
-response.status // get status code
-response.text() // get response text (or .bytes())
-response.headers // get response headers
+    .header("name", "value")
+    // add a single HTTP header
+
+    // or add multiple headers at once
+    .headers(
+        mapOf(
+            "name" to "value"
+        )
+    )
+
+    .body("JSON", "application/json")
+    // request body and its MIME type
+    // examples: JSON -> application/json, plain text -> text/plain
+
+    .timeout(2000)
+    // request timeout in milliseconds
+
+    .send()
+// send the request and receive the response
+
+// access response data
+response.status // HTTP status code (e.g. 200, 404, 500)
+response.text() // response body as a String (or use response.bytes())
+response.headers // response headers
 ```
 
 ### how to install:
