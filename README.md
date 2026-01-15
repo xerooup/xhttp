@@ -43,6 +43,7 @@ val response = XHttp
 
 // access response data
 response.status // HTTP status code (e.g. 200, 404, 500)
+response.ok // if the request is successful returns true
 response.text() // response body as a String (or use response.bytes())
 response.headers // response headers
 ```

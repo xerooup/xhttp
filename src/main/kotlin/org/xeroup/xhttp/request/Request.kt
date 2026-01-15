@@ -72,6 +72,7 @@ class Request internal constructor(
         return Response(
             status = httpResponse.statusCode(),
             headers = httpResponse.headers().map().mapValues { it.value.joinToString(",") },
+            ok = httpResponse.statusCode() in 200..299,
             body = httpResponse.body()
         )
     }
