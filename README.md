@@ -15,14 +15,15 @@ you don't need documentation or long guides.<br>
 just look at the example below - everything is straightforward:
 ```kt
 import org.xeroup.xhttp.XHttp
+import kotlin.time.Duration.Companion.seconds
 
 val response = XHttp
-    .post("URL")
     // HTTP method and target URL
     // available methods: get(), post(), put(), delete()
+    .post("URL")
 
-    .header("name", "value")
     // add a single HTTP header
+    .header("name", "value")
 
     // or add multiple headers at once
     .headers(
@@ -31,15 +32,17 @@ val response = XHttp
         )
     )
 
-    .body("JSON", "application/json")
     // request body and its MIME type
     // examples: JSON -> application/json, plain text -> text/plain
+    .body("JSON", "application/json")
 
-    .timeout(2000)
     // request timeout in milliseconds
+    .timeout(2000)
+    // or: 
+    .timeout(2.seconds)
 
+    // send the request and receive the response
     .send()
-// send the request and receive the response
 
 // access response data
 response.status // HTTP status code (e.g. 200, 404, 500)
