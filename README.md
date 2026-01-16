@@ -14,41 +14,38 @@ xhttp focuses on simplicity and predictability.
 you don't need documentation or long guides.<br>
 just look at the example below - everything is straightforward:
 ```kt
-import org.xeroup.xhttp.XHttp
+import io.github.xerooup.xhttp.XHttp
 import kotlin.time.Duration.Companion.seconds
 
 val response = XHttp
-    // HTTP method and target URL
     // available methods: get(), post(), put(), delete()
     .post("URL")
-
+    
     // add a single HTTP header
     .header("name", "value")
-
+    
     // or add multiple headers at once
     .headers(
         mapOf(
             "name" to "value"
         )
     )
-
-    // request body and its MIME type
-    // examples: JSON -> application/json, plain text -> text/plain
+    
     .body("JSON", "application/json")
-
-    // request timeout in milliseconds
+    
     .timeout(2000)
     // or: 
     .timeout(2.seconds)
-
-    // send the request and receive the response
+    
     .send()
 
 // access response data
-response.status // HTTP status code (e.g. 200, 404, 500)
-response.ok // if the request is successful returns true
-response.text() // response body as a String (or use response.bytes())
-response.headers // response headers
+response.status
+response.headers
+
+response.ok // if request is successfully
+response.text() // get a response in the text 
+response.bytes() // or in the bytes
 ```
 
 ### how to install:

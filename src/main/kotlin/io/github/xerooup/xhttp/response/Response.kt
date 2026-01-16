@@ -1,4 +1,4 @@
-package org.xeroup.xhttp.response
+package io.github.xerooup.xhttp.response
 
 // http response
 class Response internal constructor(

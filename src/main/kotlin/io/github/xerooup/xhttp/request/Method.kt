@@ -1,4 +1,4 @@
-package org.xeroup.xhttp.request
+package io.github.xerooup.xhttp.request
 
 // http methods
 internal enum class Method {

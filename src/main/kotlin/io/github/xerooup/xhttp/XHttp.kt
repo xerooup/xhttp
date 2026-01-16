@@ -1,7 +1,7 @@
-package org.xeroup.xhttp
+package io.github.xerooup.xhttp
 
-import org.xeroup.xhttp.request.Method
-import org.xeroup.xhttp.request.Request
+import io.github.xerooup.xhttp.request.Method
+import io.github.xerooup.xhttp.request.Request
 
 // entry point
 object XHttp {

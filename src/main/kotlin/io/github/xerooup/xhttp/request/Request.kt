@@ -1,7 +1,6 @@
-package org.xeroup.xhttp.request
+package io.github.xerooup.xhttp.request
 
-import org.xeroup.xhttp.request.Method
-import org.xeroup.xhttp.response.Response
+import io.github.xerooup.xhttp.response.Response
 import java.net.URI
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
