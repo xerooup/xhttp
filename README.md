@@ -18,7 +18,7 @@ import io.github.xerooup.xhttp.XHttp
 import kotlin.time.Duration.Companion.seconds
 
 val response = XHttp
-    // available methods: get(), post(), put(), delete()
+    // available methods: get(), post(), put(), delete(), head()
     .post("URL")
     
     // add a single HTTP header
