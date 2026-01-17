@@ -9,4 +9,5 @@ object XHttp {
     fun post(url: String): Request = Request(Method.POST, url)
     fun put(url: String): Request = Request(Method.PUT, url)
     fun delete(url: String): Request = Request(Method.DELETE, url)
+    fun head(url: String): Request = Request(Method.HEAD, url)
 }
