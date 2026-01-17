@@ -53,10 +53,8 @@ response.bytes() // or in the bytes
 ```kt 
 repositories {
     mavenCentral()
-    maven { url = uri("https://jitpack.io") }
 }
-
 dependencies {
-    implementation("com.github.xerooup:xhttp:ACTUAL_VERSION")
+    implementation("io.github.xerooup:xhttp:ACTUAL_VERSION")
 }
 ```
