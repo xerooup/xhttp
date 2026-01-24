@@ -48,13 +48,19 @@ response.text() // get a response in the text
 response.bytes() // or in the bytes
 ```
 
-### how to install:
 `build.gradle.kts` example:
 ```kt 
-repositories {
-    mavenCentral()
-}
 dependencies {
     implementation("io.github.xerooup:xhttp:ACTUAL_VERSION")
 }
+```
+or `pom.xml`:
+```xml
+<dependencies>
+    <dependency>
+        <groupId>io.github.xerooup</groupId>
+        <artifactId>blitzy</artifactId>
+        <version>VERSION</version>
+    </dependency>
+</dependencies>
 ```
