@@ -8,7 +8,6 @@ import java.net.http.HttpResponse
 import java.time.Duration
 import kotlin.collections.iterator
 
-// request builder
 class Request internal constructor(
     private val method: Method,
     private val url: String
@@ -31,7 +30,7 @@ class Request internal constructor(
     }
 
     fun timeout(duration: kotlin.time.Duration): Request = apply {
-        timeoutMs = duration.inWholeMilliseconds.toLong()
+        timeoutMs = duration.inWholeMilliseconds
     }
 
     fun body(text: String, contentType: String): Request = apply {

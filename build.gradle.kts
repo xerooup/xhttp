@@ -1,11 +1,11 @@
 plugins {
-    kotlin("jvm") version "2.2.21"
+    kotlin("jvm") version "2.3.10"
     `maven-publish`
     signing
 }
 
 group = "io.github.xerooup"
-version = "0.1.3"
+version = "0.2.0"
 
 repositories {
     mavenCentral()
@@ -14,10 +14,6 @@ repositories {
 java {
     withSourcesJar()
     withJavadocJar()
-}
-
-tasks.test {
-    useJUnitPlatform()
 }
 
 kotlin {
@@ -31,7 +27,7 @@ publishing {
 
             pom {
                 name.set("xhttp")
-                description.set("simple api for sending web requests")
+                description.set("A small and minimalistic API for communicating with the internet.")
                 url.set("https://github.com/xerooup/xhttp")
 
                 licenses {
