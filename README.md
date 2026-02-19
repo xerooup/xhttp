@@ -23,7 +23,7 @@ or `pom.xml`:
 </dependencies>
 ```
 
-### Getting started
+## Getting started
 To get started with **xhttp**, go to the [documentation](https://xerooup.github.io/xhttp).
 
 ### Minimal code
