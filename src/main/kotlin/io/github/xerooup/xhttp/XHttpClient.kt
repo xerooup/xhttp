@@ -59,6 +59,15 @@ class XHttpClient internal constructor(
      */
     fun head(path: String, block: RequestBuilder.() -> Unit = {}): Response =
         request(Method.HEAD, path, block)
+
+    /**
+     * Sends a PATCH request to the given path or full URL
+     * @param path relative path appended to baseUrl, or a full URL if it starts with http
+     * @param block optional DSL block to configure headers, body, timeout, etc
+     * @return the HTTP response
+     */
+    fun patch(path: String, block: RequestBuilder.() -> Unit = {}): Response =
+        request(Method.PATCH, path, block)
 }
 
 /**

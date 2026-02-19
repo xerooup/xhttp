@@ -51,6 +51,15 @@ fun delete(url: String, block: RequestBuilder.() -> Unit = {}): Response =
 fun head(url: String, block: RequestBuilder.() -> Unit = {}): Response =
     RequestBuilder(Method.HEAD, url).apply(block).send()
 
+/**
+ * Sends a PATCH request to the given path or full URL
+ * @param path relative path appended to baseUrl, or a full URL if it starts with http
+ * @param block optional DSL block to configure headers, body, timeout, etc
+ * @return the HTTP response
+ */
+fun patch(path: String, block: RequestBuilder.() -> Unit = {}): Response =
+    RequestBuilder(Method.PATCH, path).apply(block).send()
+
 // --- keep old object API for backwards compat ---
 
 @Deprecated(
